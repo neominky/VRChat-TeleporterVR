@@ -15,8 +15,8 @@ namespace TeleporterVR
 {
     public static class BuildInfo
     {
-        public const string Name = "TeleporterVR";
-        public const string Author = "Janni, Lily";
+        public const string Name = "TeleporterVR(modified)";
+        public const string Author = "neominky";
         public const string Company = null;
         public const string Version = "4.9.2";
         public const string DownloadLink = "https://github.com/MintLily/VRChat-TeleporterVR";
@@ -82,7 +82,7 @@ namespace TeleporterVR
         private void OnUiManagerInit()
         {
             VRUtils.Init();
-            GetSetWorld.Init();
+            //GetSetWorld.Init();
             if (EnableTeleportIndicator.Value)
                 LR = GeneralUtils.GetPtrObj().GetOrAddComponent<TPLocationIndicator>();
 
@@ -125,7 +125,7 @@ namespace TeleporterVR
             switch (buildIndex) {
                 case 0: case 1: break;
                 default:
-                    MelonCoroutines.Start(GetSetWorld.DelayedLoad());
+                    //MelonCoroutines.Start(GetSetWorld.DelayedLoad());
                     WorldActions.OnLeftWorld();
                     break;
             }
